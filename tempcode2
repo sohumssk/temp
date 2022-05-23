@@ -1,0 +1,23 @@
+import pandas as pd
+import numpy as np
+
+data = pd.read_csv('iris.csv')
+
+data.head()
+data.tail()
+data.info()
+data.describe()
+data.isnull
+data.shape
+data.columns
+df=['year', 'price', 'size']
+data[df]
+
+data2 = data[df].head(10)
+data2
+
+caqu = pd.DataFrame(data, columns = ['state'])
+
+caqu_state = pd.get_dummmies(caqu['state'])
+caqu_new = pd.concat([caqu, caqu_state], axis=1)
+print(caqu_new)
